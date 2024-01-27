@@ -74,9 +74,9 @@ namespace Perfect_Launcher
                 char[] Disk = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 
                 foreach (char c in Disk)
-                    if (Directory.Exists(c + ":\\Level Up\\Perfect World\\element"))
+                    if (Directory.Exists(c + ":\\Perfect World Zenith\\element"))
                     {
-                        Process.Start(c + ":\\Level Up\\Perfect World\\element");
+                        Process.Start(c + ":\\Perfect World Zenith\\element");
                         break;
                     }
 
@@ -244,7 +244,7 @@ namespace Perfect_Launcher
 
             // Registra o username no arquivo de texto para forçar a entrada no servidor
             // O login e o server são armazenados nesse arquivo em base64
-            // D:\Level Up\Perfect World\element\userdata\accounts.txt
+            // C:\Perfect World Zenith\element\userdata\accounts.txt
             // LOGIN 29000:gateway2.perfectworld.com.br,Ophiuchus(PvE),0
             // cada linha é pra um login e um server
             // Criar uma linha inteira em base64 e verificar se ela já existe no arquivo,

@@ -730,22 +730,10 @@ namespace Perfect_Launcher
             }
 
             int KEY;
+            KEY = VK_F4; 
+     
 
-            switch (Count)
-            {
-                case 1: KEY = VK_F1; label5.Text = "Pressionando F1"; break;
-                case 2: KEY = VK_F2; label5.Text = "Pressionando F2"; break;
-                case 3: KEY = VK_F3; label5.Text = "Pressionando F3"; break;
-                case 4: KEY = VK_F4; label5.Text = "Pressionando F4"; break;
-                case 5: KEY = VK_F5; label5.Text = "Pressionando F5"; break;
-                case 6: KEY = VK_F6; label5.Text = "Pressionando F6"; break;
-                case 7: KEY = VK_F7; label5.Text = "Pressionando F7"; break;
-                default: KEY = VK_F8; label5.Text = "Pressionando F8"; break;
-            }
-
-            // Se o onlyf4 for true, força a key pra ser o F4
-            if (OnlyF4)
-                KEY = VK_F4;
+        
 
             // Pra cada conta na lista, joga a janela pra frente e pressiona a tecla
             try
@@ -771,20 +759,8 @@ namespace Perfect_Launcher
                     // Valor do numericupdown / pela quantidade de contas abertas
                     await Task.Delay((Count <= 4 ? Convert.ToInt32(numericUpDown1.Value) : Convert.ToInt32(numericUpDown2.Value)) / ProcessQueue.Count);
                 }
-
-                // Caso o onlyf4 seja true, checa se é em loop
-                if (OnlyF4)
-                {
-                    // Se NÃO for um loop, já seta o valor necessário pra parar na próxima iteração
-                    if (!checkBox1.Checked)
-                        Stop();
-                }
-                else
-                {
-                    // Só mantem o track se o Onlyf4 for false
-                    Count++;
-                }
-                ComboLoop(OnlyF4);
+                Stop();
+                
             }
             catch(Exception x)
             {
@@ -916,11 +892,7 @@ namespace Perfect_Launcher
 
         private void button10_Click(object sender, EventArgs e)
         {
-            if (bForceStop || ProcessQueue.Count <= 0)
-            {
-                Stop();
-                return;
-            }
+    
 
             Start(true);
         }

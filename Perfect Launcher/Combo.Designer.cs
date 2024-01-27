@@ -204,7 +204,7 @@ namespace Perfect_Launcher
             this.button5.TabStop = false;
             this.button5.Text = "COMBAR";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.button10_Click);
             // 
             // button6
             // 
@@ -476,7 +476,7 @@ namespace Perfect_Launcher
             this.button14.TabStop = false;
             this.button14.Text = "COMBAR";
             this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.button14.Click += new System.EventHandler(this.button10_Click);
             // 
             // button15
             // 
